@@ -58,10 +58,3 @@ Open `index.html` directly in any web browser — no local server is required fo
 ## No CI/CD
 
 There are no GitHub Actions workflows, linters, or test runners configured. No build or test commands need to be run before committing. When making changes, manually open the affected HTML files in a browser to verify they render correctly.
-
-## Adding a New Team Member
-
-1. Create `html/team/about<Name>.html` modelled after an existing profile page.
-2. Create `css/about<Name>.css` for the member's styles (or use inline styles as Yaroslav's page does).
-3. Add a profile image to `content/images/` if available.
-4. Update `index.html` to link the member's list item to their new page.
