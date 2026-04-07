@@ -17,7 +17,7 @@ This is a static HTML/CSS team portfolio website built by a group of Ukrainian u
 │   └── team/
 │       ├── aboutAllen.html       # Profile page for Allen (Укачукву Аллен, Kharkiv/НУРЕ)
 │       ├── aboutOleh.html        # Profile page for Oleh (В. Олег, Lviv)
-│       └── aboutyaroslav.html    # Profile page for Yaroslav (Співак Ярослав, Kharkiv)
+│       └── aboutyaroslav.html    # Profile page for Yaroslav (Співак Ярослав, Kharkiv) — note: all-lowercase, unlike other files
 ├── content/
 │   └── images/
 │       └── Allen.png             # Profile photo for Allen
@@ -40,7 +40,7 @@ This is a static HTML/CSS team portfolio website built by a group of Ukrainian u
 ## File Naming & Conventions
 
 - HTML pages for team members live in `html/team/`.
-- Each member's CSS file lives in `css/` and is named `about<Name>.css` (camelCase, first letter of name capitalised).
+- Each member's CSS file lives in `css/` and is named `about<Name>.css` (camelCase, first letter of name capitalized). Note: `aboutyaroslav.html` is an exception — it uses all-lowercase, deviating from the pattern of `aboutAllen.html` and `aboutOleh.html`.
 - Images live in `content/images/`.
 - Relative paths are used throughout (e.g., `../../css/aboutAllen.css` from inside `html/team/`).
 
