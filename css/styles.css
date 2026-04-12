@@ -108,6 +108,7 @@ nav#navbar-placeholder {
 
 .page-shell {
     position: relative;
+    overflow: hidden;
     overflow: clip;
 }
 
