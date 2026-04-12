@@ -46,9 +46,8 @@ This is a static HTML/CSS team portfolio website built by a group of Ukrainian u
 
 ## Known Issues / Quirks
 
-- `index.html` uses a Windows-style backslash path for the stylesheet (`href=".\css\styles.css"`), which may not resolve correctly on non-Windows servers. Forward slashes (`./css/styles.css`) are preferred.
-- The team list in `index.html` has four members (Аллен, Ярослав, Марина, Олег), but **Марина's profile page does not yet exist** in the repository.
-- The `<a href="#">` links in `index.html` are placeholders — they do not yet point to the individual profile pages.
+- The team section in `index.html` includes four members (Аллен, Ярослав, Марина, Олег), but **Марина's profile page does not yet exist** in the repository.
+- `index.html` contains a reserved `<nav id="navbar-placeholder">` block for future global navigation injection.
 - `aboutyaroslav.html` embeds its CSS inline rather than linking to an external file, unlike the other profile pages.
 
 ## How to Preview
