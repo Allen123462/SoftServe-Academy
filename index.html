@@ -1,24 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href=".\css\styles.css">
+    <meta name="description" content="Сучасна сторінка команди академії SoftServe з описом, ролями та контактами.">
+    <title>Команда академії SoftServe</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-    <span class="mainText">
-        Вітаю на нашій сторійнці! <br>
-        Трішки інформації про нас. Наша команда з чотирьох осіб. Детальніше на наших сторішках нижче.
-    </span>
-    <ul class="teamMembers">
-        <li><a href="#">Аллен</a></li>
-        <li><a href="#">Ярослав</a></li>
-        <li><a href="#">Марина</a></li>
-        <li><a href="#">Олег</a></li>
-    </ul>
+    <a class="skip-link" href="#main-content">Перейти до основного вмісту</a>
+    <nav id="navbar-placeholder" aria-label="Майбутня глобальна навігація">
+        <div class="navbar-placeholder-bar">Зарезервоване місце для глобальної навігації</div>
+    </nav>
+
+    <div class="page-shell">
+        <main id="main-content">
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-card">
+                        <div class="hero-grid">
+                            <div>
+                                <h1>Вітаємо у <span>нашій команді</span></h1>
+                                <p class="hero-copy">
+                                    Ми — команда студентів. Наша історія почалася з випадкового розподілу на першій онлайн-лекції, але тепер ми цілком свідомо працюємо разом: вивчаємо інструменти розробки, пишемо код і вчимося розуміти одне одного.
+                                </p>
+                            </div>
+                            <aside class="hero-meta" aria-label="Короткі факти про команду">
+                                <div class="meta-card">
+                                    <strong>Формат</strong>
+                                    <p>Студентський проєкт. Працюємо без зайвої бюрократії, але з дедлайнами.</p>
+                                </div>
+                                <div class="meta-card">
+                                    <strong>Підхід</strong>
+                                    <p>Командна робота, розподіл завдань і фокус на практичних навичках.</p>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="about">
+                <div class="container">
+                    <div class="section-heading">
+                        <div>
+                            <h2>Про нас</h2>
+                            <p>Коротка історія того, як випадковий збіг перетворився на стабільну командну культуру.</p>
+                        </div>
+                    </div>
+                    <div class="about-grid">
+                        <article class="panel">
+                            <span class="story-badge">Як усе почалося</span>
+                            <p class="about-copy">
+                                Наша команда сформувалася випадково під час першої лекції в Zoom. Здавалося б, звичайний старт семестру, але нам вдалося швидко знайти спільну мову. Відтоді ми разом, підтримуємо одне одного й поступово перетворюємо студентський досвід на щось значно більш цілісне.
+                            </p>
+                        </article>
+                        <aside class="panel facts" aria-label="Факти про команду">
+                            <div class="fact">
+                                <strong>Спільний ритм</strong>
+                                <span>Ми добре працюємо як команда, бо з першого дня вчилися чути одне одного.</span>
+                            </div>
+                            <div class="fact">
+                                <strong>Без зайвої драматургії</strong>
+                                <span>У нас немає потреби в гучних маніфестах: стабільність і взаємна підтримка вже
+                                    працюють.</span>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="what-we-do">
+                <div class="container">
+                    <div class="section-heading">
+                        <div>
+                            <h2>Що ми робимо</h2>
+                            <p>Наш фокус простий: командна ефективність, базові інструменти розробки та трохи дорослого
+                                гумору у процесі.</p>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <ul class="what-list">
+                            <li>Вчимося працювати в команді: розподіляємо завдання та розбираємось із GitHub.</li>
+                            <li>Як каже наш лідер, витрачаємо ваші гроші, але робимо це максимально культурно та з користю для нашого розвитку.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="team">
+                <div class="container">
+                    <div class="section-heading">
+                        <div>
+                            <h2>Учасники команди</h2>
+                            <p>Картки побудовані так, щоб підкреслити характер кожного, але залишити місце для росту.</p>
+                        </div>
+                    </div>
+                    <div class="team-grid">
+                        <article class="team-card featured">
+                            <img class="avatar avatar-photo" src="./content/images/Allen.png" alt="Фото Аллена" width="320" height="320" loading="lazy" decoding="async">
+                            <div class="details">
+                                <div>
+                                    <h3>Аллен</h3>
+                                    <span class="team-role">Тімлідер</span>
+                                </div>
+                                <p>
+                                    Людина, яка зібрала нас разом і координує процес.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="team-card">
+                            <div class="avatar alt" aria-hidden="true">Я</div>
+                            <h3>Ярослав</h3>
+                            <span class="team-role">Роль у процесі змінна</span>
+                            <p>
+                                Формально напрям ще не закріплений, але в глибині душі він теж фулстек-розробник і готовий підхопити будь-яку частину задачі.
+                            </p>
+                        </article>
+
+                        <article class="team-card">
+                            <div class="avatar warm" aria-hidden="true">М</div>
+                            <h3>Марина</h3>
+                            <span class="team-role">Роль у процесі змінна</span>
+                            <p>
+                                Її роль ще формується разом із завданнями, але внутрішньо це теж фулстек-розробниця, яка відчуває продукт цілісно.
+                            </p>
+                        </article>
+
+                        <article class="team-card">
+                            <div class="avatar" aria-hidden="true">О</div>
+                            <h3>Олег</h3>
+                            <span class="team-role">Роль у процесі змінна</span>
+                            <p>
+                                Офіційно все ще залишається гнучким і не надто формалізованим, зате в душі він, безумовно, фулстек-розробник.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="contact">
+                <div class="container">
+                    <div class="section-heading">
+                        <div>
+                            <h2>Контакти</h2>
+                        </div>
+                    </div>
+                    <div class="contact-grid">
+                        <div class="panel contact-panel">
+                            <strong class="story-badge">Зв'язок із командою</strong>
+                            <p class="about-copy">
+                                Якщо захочете написати нам, тут можна буде швидко знайти відповідну людину. Найшвидший спосіб зв'язатися з нами — написати в Telegram.
+                            </p>
+                            <ul class="contact-list">
+                                <li><span>Аллен</span><a class="handle" href="https://t.me/Hello_Im_Allen">@Hello_Im_Allen</a></li>
+                                <li><span>Ярослав</span><a class="handle" href="https://t.me/Frish07">@Frish07</a></li>
+                                <li><span>Марина</span><a class="handle" href="https://t.me/marynachyzhh">@marynachyzhh</a></li>
+                                <li><span>Олег</span><a class="handle" href="https://t.me/electrono_man">@electrono_man</a></li>
+                            </ul>
+                        </div>
+
+                        <aside class="panel handles-panel">
+                            <strong class="story-badge">Для швидкого старту</strong>
+                            <div class="fact">
+                                <strong>Формат звернення</strong>
+                                <span>Коротко, по суті.</span>
+                            </div>
+                            <div class="fact">
+                                <strong>Очікування</strong>
+                                <span>Невеликі завдання, чіткі домовленості та взаємна повага до часу.</span>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-band">
+                    <strong>Команда академії SoftServe</strong>
+                    <span>Зібрані випадково, працюємо свідомо, рухаємося разом.</span>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>
