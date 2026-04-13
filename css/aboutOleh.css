@@ -54,7 +54,7 @@ button:focus-visible {
 
 body {
     margin: 0;
-    padding: 2rem 1rem;
+    padding: 2rem 0;
     font-family: Inter, "Segoe UI", Arial, sans-serif;
     line-height: 1.6;
     color: var(--text);
@@ -104,7 +104,7 @@ nav#navbar-placeholder {
 }
 
 .profile-container {
-    width: min(100%, var(--container));
+    width: min(100% - 2rem, var(--container));
     margin: 0 auto;
     display: grid;
     grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
