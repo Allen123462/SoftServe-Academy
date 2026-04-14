@@ -4,23 +4,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../css/aboutAllen.css">
+    <title>Аллен | Сторінка про себе</title>
+    <link rel="stylesheet" href="../../css/styles.css">
 </head>
 
 <body>
-    <div class="about">
-        <div class="row1">
-            <img src="../../content/images/Allen.png" alt="Файний хлопак">
-            <div class="textConteiner">
-                <span> Укачукву Аллен<br>З міста Харків<br>20 років<br>Навчуюсь у Харківському національному
-                    університеті
-                    радіоелектроніки</span>
+    <a class="skip-link" href="#main-content">Перейти до основного вмісту</a>
+    <nav id="navbar-placeholder" aria-label="Майбутня глобальної навігації">
+        <div class="navbar-placeholder-bar">Зарезервоване місце для глобальної навігацію</div>
+    </nav>
+
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Увімкнути нічну тему">
+        <label for="theme-switch" class="theme-switch-label">
+            <span class="theme-switch-icon">🌙</span>
+            <span class="theme-switch-text">Тема</span>
+        </label>
+    </div>
+
+    <div class="page-shell">
+        <main id="main-content">
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-card">
+                        <div class="hero-grid">
+                            <div>
+                                <h1>Укачукву Аллен</h1>
+                                <p class="hero-copy">
+                                    Я студент-першокурсник КІІТ ХНУРЕ, який обрав програмування як шлях до професійного
+                                    розвитку.
+                                </p>
+                            </div>
+                            <aside class="hero-meta" aria-label="Короткі факти про Аллена">
+                                <div class="meta-card">
+                                    <strong>Місто</strong>
+                                    <p>Харків</p>
+                                </div>
+                                <div class="meta-card">
+                                    <strong>Університет</strong>
+                                    <p>ХНУРЕ</p>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="about-grid">
+                        <article class="panel">
+                            <span class="story-badge">Про мене</span>
+                            <p class="about-copy">
+                                Привіт. Приємно познайомитись. Як згадано вище, мене звати Аллен. Навчаюсь на першому
+                                курсі КІІТ
+                                ХНУРЕ у прискореній групі. З неочікуваного здав на права у 18 років. Пішов за цим
+                                направленням,
+                                бо з дитинства хотілось стати програмістом. Сподіваюсь, що все вийде.
+                            </p>
+                        </article>
+                        <aside class="panel facts" aria-label="Додаткова інформація">
+                            <div class="fact">
+                                <strong>Вік</strong>
+                                <span>20 років</span>
+                            </div>
+                            <div class="fact">
+                                <strong>Напрям</strong>
+                                <span>Фулстек-розробка</span>
+                            </div>
+                        </aside>
+                    </div>
+
+                    <div class="contact-grid">
+                        <div class="panel contact-panel">
+                            <strong class="story-badge">Навчання та мотивація</strong>
+                            <p class="about-copy">
+                                Вибір напрямку зроблений усвідомлено: хочу розвиватися як розробник і працювати над
+                                практичними продуктами.
+                                Найбільше ціную можливість вчитися у команді.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="navigation-card">
+                        <a href="../../index.html" class="back-link">Повернутися до списку команди</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-band">
+                    <strong>Аллен | Команда академії SoftServe</strong>
+                    <span>Студент, який рухається вперед разом із командою.</span>
+                </div>
             </div>
-        </div>
-        <span class="comment">Привіт. Приємно познайомитись. Як згадано вище, мене звати Аллен. Навчаюсь на першому
-            курсі КІІТ ХНУРЕ у прискореній групі. З неочікуванного здав на права у 18 років. Пішов за цим направленням,
-            бо з дитинства хотілось стати програмістом. Сподіваюсь що все вийде :) </span>
+        </footer>
     </div>
 </body>
 
