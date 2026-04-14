@@ -124,6 +124,10 @@ nav#navbar-placeholder {
     text-align: center;
 }
 
+.sidebar + .main-content {
+    margin-left: 1.25rem; /* fallback for gap */
+}
+
 .avatar-placeholder {
     width: 128px;
     height: 128px;
@@ -191,6 +195,7 @@ nav#navbar-placeholder {
 
 .info-card,
 .navigation-card {
+    padding: 1.2rem;
     padding: clamp(1.2rem, 2.4vw, 1.8rem);
     border-radius: var(--radius-xl);
     background: var(--surface);
@@ -209,6 +214,7 @@ nav#navbar-placeholder {
 
 .info-card h3 {
     margin: 0;
+    font-size: 1.35rem;
     font-size: clamp(1.35rem, 2.2vw, 1.6rem);
     line-height: 1.1;
     letter-spacing: -0.02em;
@@ -243,6 +249,10 @@ li {
     border-radius: var(--radius-md);
     background: rgba(255, 255, 255, 0.76);
     border: 1px solid rgba(29, 36, 48, 0.08);
+}
+
+ul li:not(:last-child) {
+    margin-bottom: 0.75rem; /* fallback for gap */
 }
 
 li::before {

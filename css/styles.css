@@ -19,8 +19,8 @@
 }
 
 body .teamMembers li a{
-    font-size: 30px;
-* {
+    
+font-size: 30px;
     box-sizing: border-box;
 }
 
@@ -269,6 +269,7 @@ body:has(#theme-switch:checked) .theme-switch-label {
 .hero-card {
     position: relative;
     overflow: hidden;
+    padding: 2rem;
     padding: clamp(2rem, 4vw, 4.25rem);
     border-radius: var(--radius-xl);
     border: 1px solid rgba(255, 255, 255, 0.65);
@@ -313,6 +314,7 @@ body:has(#theme-switch:checked) .theme-switch-label {
 
 .hero h1 {
     margin: 0;
+    font-size: 2.8rem;
     font-size: clamp(2.8rem, 7vw, 5.6rem);
     line-height: 0.94;
     letter-spacing: -0.06em;
@@ -327,6 +329,7 @@ body:has(#theme-switch:checked) .theme-switch-label {
     margin: 1.4rem 0 0;
     max-width: 40rem;
     color: var(--muted);
+    font-size: 1.05rem;
     font-size: clamp(1.05rem, 1.7vw, 1.18rem);
 }
 
@@ -334,6 +337,7 @@ body:has(#theme-switch:checked) .theme-switch-label {
     display: grid;
     gap: 1rem;
     align-self: stretch;
+    margin-left: clamp(1.5rem, 3vw, 3rem); /* fallback for gap in hero-grid */
 }
 
 .meta-card {
@@ -342,6 +346,10 @@ body:has(#theme-switch:checked) .theme-switch-label {
     background: rgba(255, 255, 255, 0.82);
     border: 1px solid rgba(29, 36, 48, 0.08);
     box-shadow: 0 14px 28px rgba(29, 36, 48, 0.06);
+}
+
+.hero-meta .meta-card:not(:last-child) {
+    margin-bottom: 1rem; /* fallback for gap */
 }
 
 .meta-card strong {
@@ -369,6 +377,7 @@ body:has(#theme-switch:checked) .theme-switch-label {
 
 .section-heading h2 {
     margin: 0;
+    font-size: 1.65rem;
     font-size: clamp(1.65rem, 3vw, 2.35rem);
     line-height: 1.05;
     letter-spacing: -0.03em;
@@ -381,12 +390,13 @@ body:has(#theme-switch:checked) .theme-switch-label {
 }
 
 .panel {
-    padding: clamp(1.4rem, 2.4vw, 2rem);
+    padding: 1.4rem;
     border-radius: var(--radius-xl);
     background: var(--surface);
     border: 1px solid rgba(255, 255, 255, 0.75);
     box-shadow: var(--shadow-md);
     backdrop-filter: blur(14px);
+    margin-bottom: 1rem;
 }
 
 .about-grid {
@@ -394,10 +404,25 @@ body:has(#theme-switch:checked) .theme-switch-label {
     grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
     gap: 1.25rem;
     align-items: stretch;
+    margin-bottom: 4rem;
 }
 
 .about-grid .panel {
     height: 100%;
+}
+
+@supports not (gap: 1.25rem) {
+    .about-grid {
+        display: block;
+    }
+
+    .about-grid > * {
+        margin-bottom: 1.25rem;
+    }
+
+    .about-grid .panel:nth-child(2) {
+        margin-left: 1.25rem;
+    }
 }
 
 .about-copy {
@@ -436,6 +461,10 @@ body:has(#theme-switch:checked) .theme-switch-label {
     border: 1px solid rgba(29, 36, 48, 0.08);
 }
 
+.facts .fact:not(:last-child) {
+    margin-bottom: 0.9rem; /* fallback for gap */
+}
+
 .fact strong {
     display: block;
     margin-bottom: 0.3rem;
@@ -466,6 +495,10 @@ body:has(#theme-switch:checked) .theme-switch-label {
     color: var(--text);
 }
 
+.what-list li:not(:last-child) {
+    margin-bottom: 0.9rem; /* fallback for gap */
+}
+
 .what-list li::before {
     content: "";
     position: absolute;
@@ -481,7 +514,7 @@ body:has(#theme-switch:checked) .theme-switch-label {
 .team-grid {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 1rem;
+    gap: 4rem;
 }
 
 .team-card {
@@ -516,6 +549,7 @@ body:has(#theme-switch:checked) .theme-switch-label {
 }
 
 .avatar {
+    width: 92px;
     width: clamp(92px, 12.1vw, 123px);
     aspect-ratio: 1;
     flex-shrink: 0;
@@ -523,6 +557,7 @@ body:has(#theme-switch:checked) .theme-switch-label {
     border-radius: 24px;
     display: grid;
     place-items: center;
+    font-size: 2rem;
     font-size: clamp(2rem, 4vw, 2.9rem);
     font-weight: 800;
     letter-spacing: -0.06em;
@@ -575,10 +610,15 @@ body:has(#theme-switch:checked) .theme-switch-label {
     gap: 0.55rem;
 }
 
+.team-card .details > *:not(:last-child) {
+    margin-bottom: 0.55rem; /* fallback for gap */
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .contact-panel {
@@ -606,6 +646,10 @@ body:has(#theme-switch:checked) .theme-switch-label {
     border-radius: var(--radius-md);
     background: rgba(255, 255, 255, 0.76);
     border: 1px solid rgba(29, 36, 48, 0.08);
+}
+
+.contact-list li:not(:last-child) {
+    margin-bottom: 0.85rem; /* fallback for gap */
 }
 
 .contact-list span {
@@ -655,6 +699,10 @@ footer {
     box-shadow: var(--shadow-md);
     backdrop-filter: blur(14px);
     text-align: center;
+}
+
+.sidebar + .main-content {
+    margin-left: 1.5rem; /* fallback for gap */
 }
 
 .avatar-placeholder {
@@ -724,6 +772,7 @@ footer {
 
 .info-card,
 .navigation-card {
+    padding: 1.2rem;
     padding: clamp(1.2rem, 2.4vw, 1.8rem);
     border-radius: var(--radius-xl);
     background: var(--surface);
@@ -731,6 +780,10 @@ footer {
     box-shadow: var(--shadow-md);
     backdrop-filter: blur(14px);
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.main-content > :not(:last-child) {
+    margin-bottom: 1rem; /* fallback for gap */
 }
 
 .info-card:hover,
@@ -742,6 +795,7 @@ footer {
 
 .info-card h3 {
     margin: 0;
+    font-size: 1.35rem;
     font-size: clamp(1.35rem, 2.2vw, 1.6rem);
     line-height: 1.1;
     letter-spacing: -0.02em;
