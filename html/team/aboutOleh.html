@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Олег | Сторінка про себе</title>
-    <link rel="stylesheet" href="../../css/aboutOleh.css">
+    <link rel="stylesheet" href="../../css/styles.css">
 </head>
+
 <body>
     <a class="skip-link" href="#main-content">Перейти до основного вмісту</a>
     <nav id="navbar-placeholder" aria-label="Майбутня глобальна навігація">
         <div class="navbar-placeholder-bar">Зарезервоване місце для глобальної навігації</div>
     </nav>
+
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Увімкнути нічну тему">
+        <label for="theme-switch" class="theme-switch-label">
+            <span class="theme-switch-icon">🌙</span>
+            <span class="theme-switch-text">Тема</span>
+        </label>
+    </div>
 
     <div class="profile-container">
         <aside class="sidebar">
@@ -20,7 +30,8 @@
             <div class="user-meta">
                 <h1>В. Олег</h1>
                 <p class="username">@electrono_man</p>
-                <p class="github"><a href="https://github.com/oleh-devlab" target="_blank" rel="noopener noreferrer">GitHub: @oleh-devlab</a></p>
+                <p class="github"><a href="https://github.com/oleh-devlab" target="_blank"
+                        rel="noopener noreferrer">GitHub: @oleh-devlab</a></p>
                 <p class="bio">Студент першого курсу комп'ютерних наук</p>
                 <p class="location">📍 Львів, Україна</p>
             </div>
@@ -29,12 +40,14 @@
         <main id="main-content" class="main-content">
             <section class="info-card">
                 <h3>Моє навчання</h3>
-                <p class="intro-text">Навчаюся на першому курсі у Львівському національному університеті імені Івана Франка. Зараз вивчаю:</p>
+                <p class="intro-text">Навчаюся на першому курсі у Львівському національному університеті імені Івана
+                    Франка. Зараз вивчаю:</p>
                 <ul class="skills-list">
                     <li><strong>Мови:</strong> C++, Python, Delphi</li>
                     <li><strong>Інструменти та платформи:</strong> Git, GitHub</li>
                     <li><strong>Теоретична частина:</strong> Алгоритми та структури даних, чисельні методи</li>
-                    <li><strong>Апаратне забезпечення:</strong> Електроніка та електротехніка, архітектура комп'ютерів</li>
+                    <li><strong>Апаратне забезпечення:</strong> Електроніка та електротехніка, архітектура комп'ютерів
+                    </li>
                 </ul>
             </section>
 
@@ -48,12 +61,21 @@
                     <li><span class="emoji">📖</span> Перегляд науково-фантастичних фільмів</li>
                 </ul>
             </section>
-            
+
             <div class="navigation-card">
-                 <a href="../../index.html" class="back-link">Повернутися до списку команди</a>
+                <a href="../../index.html" class="back-link">Повернутися до списку команди</a>
             </div>
         </main>
     </div>
+    <footer>
+        <div class="container">
+            <div class="footer-band">
+                <strong>Олег | Команда академії SoftServe</strong>
+                <span>Студент, що поєднує навчання та практичний розвиток.</span>
+            </div>
+        </div>
+    </footer>
 
 </body>
+
 </html>

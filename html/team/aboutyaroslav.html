@@ -1,57 +1,103 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Профіль - Співак Ярослав</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            background-color: #ffffff;
-            color: #24292e;
-            line-height: 1.5;
-            padding: 20px;
-        }
-        .profile-card {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 24px;
-            border: 1px solid #e1e4e8;
-            border-radius: 6px;
-            background-color: #f6f8fa;
-        }
-        .profile-name {
-            font-size: 24px;
-            font-weight: 600;
-            margin-top: 0;
-            margin-bottom: 16px;
-            border-bottom: 1px solid #eaecef;
-            padding-bottom: 8px;
-        }
-        .profile-info {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .profile-info li {
-            margin-bottom: 8px;
-            font-size: 16px;
-        }
-        .icon {
-            margin-right: 8px;
-        }
-    </style>
+    <title>Ярослав | Сторінка про себе</title>
+    <link rel="stylesheet" href="../../css/styles.css">
 </head>
-<body>
 
-    <div class="profile-card">
-        <h1 class="profile-name">Співак Ярослав Євгенович</h1>
-        <ul class="profile-info">
-            <li><span class="icon">📅</span><strong>Дата народження:</strong> 27 листопада 2007 року</li>
-            <li><span class="icon">🎓</span><strong>Освіта:</strong> Студент Харківського національного університету</li>
-            <li><span class="icon">💻</span><strong>Про мене:</strong> Починаючий розробник / Студент <i></i></li>
-        </ul>
+<body>
+    <a class="skip-link" href="#main-content">Перейти до основного вмісту</a>
+    <nav id="navbar-placeholder" aria-label="Майбутня глобальна навігація">
+        <div class="navbar-placeholder-bar">Зарезервоване місце для глобальної навігації</div>
+    </nav>
+
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Увімкнути нічну тему">
+        <label for="theme-switch" class="theme-switch-label">
+            <span class="theme-switch-icon">🌙</span>
+            <span class="theme-switch-text">Тема</span>
+        </label>
+    </div>
+
+    <div class="page-shell">
+        <main id="main-content">
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-card">
+                        <div class="hero-grid">
+                            <div>
+                                <h1>Співак Ярослав Євгенович</h1>
+                                <p class="hero-copy">
+                                    Починаючий розробник, який поєднує навчання та практику, щоб поступово зростати у
+                                    сфері IT.
+                                </p>
+                            </div>
+                            <aside class="hero-meta" aria-label="Короткі факти про Ярослава">
+                                <div class="meta-card">
+                                    <strong>Дата народження</strong>
+                                    <p>27 листопада 2007</p>
+                                </div>
+                                <div class="meta-card">
+                                    <strong>Освіта</strong>
+                                    <p>Харківський національний університет</p>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="about-grid">
+                        <article class="panel">
+                            <span class="story-badge">Про мене</span>
+                            <p class="about-copy">
+                                Я студент, який тільки починає шлях у розробці, але вже приділяю увагу структурам даних,
+                                алгоритмам та веб-технологіям.
+                            </p>
+                        </article>
+                        <aside class="panel facts" aria-label="Додаткова інформація">
+                            <div class="fact">
+                                <strong>Люблю</strong>
+                                <span>Працювати над практичними задачами та вчитись новому.</span>
+                            </div>
+                            <div class="fact">
+                                <strong>Прагнення</strong>
+                                <span>Зростати як розробник та створювати корисні продукти.</span>
+                            </div>
+                        </aside>
+                    </div>
+
+                    <div class="panel">
+                        <span class="story-badge">Основні навички</span>
+                        <ul class="what-list">
+                            <li>Вивчаю базові технології розробки та програмування.</li>
+                            <li>Цікавлюся алгоритмами, структурами даних і веб-сервісами.</li>
+                            <li>Прагну застосувати знання у командних проєктах та практичних завданнях.</li>
+                        </ul>
+                    </div>
+
+                    <div class="navigation-card">
+                        <a href="../../index.html" class="back-link">Повернутися до списку команди</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-band">
+                    <strong>Ярослав | Команда академії SoftServe</strong>
+                    <span>Студент, який росте разом із командою та робить перші кроки в програмуванні.</span>
+                </div>
+            </div>
+        </footer>
     </div>
 
 </body>
+
 </html>
