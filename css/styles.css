@@ -18,12 +18,15 @@
     --container: 1160px;
 }
 
-body .teamMembers li a{
-    
-font-size: 30px;
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
+body .teamMembers li a {
+    font-size: 30px;
+}
 html {
     scroll-behavior: smooth;
 }
