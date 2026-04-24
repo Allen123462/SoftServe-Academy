@@ -1,23 +1,20 @@
-name: Check Index and Update README
-
+name: Check Index HTML
 on:
-  workflow_dispatch: # Запуск вручну
+  workflow_dispatch:
 
 jobs:
   check-and-commit:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout current branch
         uses: actions/checkout@v4
 
       - name: Run check script
         id: check_file
-        # Даємо права на виконання скрипту та запускаємо його
         run: |
           chmod +x check_index.sh
           ./check_index.sh
-        continue-on-error: true # Щоб workflow не впав, якщо файлу немає
+        continue-on-error: true
 
       - name: Update README on main branch
         if: steps.check_file.outcome == 'success'
