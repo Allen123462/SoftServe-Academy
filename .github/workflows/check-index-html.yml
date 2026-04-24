@@ -1,0 +1,40 @@
+name: Check Index and Update README
+
+on:
+  workflow_dispatch: # Запуск вручну
+
+jobs:
+  check-and-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout current branch
+        uses: actions/checkout@v4
+
+      - name: Run check script
+        id: check_file
+        # Даємо права на виконання скрипту та запускаємо його
+        run: |
+          chmod +x check_index.sh
+          ./check_index.sh
+        continue-on-error: true # Щоб workflow не впав, якщо файлу немає
+
+      - name: Update README on main branch
+        if: steps.check_file.outcome == 'success'
+        run: |
+          # Налаштування гіта
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@://github.com"
+
+          # Клонуємо main в окрему папку, щоб оновити README
+          git clone https://x-access-token:${{ secrets.TASK_TOKEN }}@://github.com{{ github.repository }}.git temp_main
+          cd temp_main
+          git checkout main
+
+          # Додаємо запис у README.md
+          echo -e "\nBranch: ${{ github.ref_name }} - index.html exists ✅" >> README.md
+
+          # Коміт та пуш за допомогою вашого токена
+          git add README.md
+          git commit -m "Update README: index.html found in ${{ github.ref_name }}"
+          git push origin main
