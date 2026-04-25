@@ -6,9 +6,14 @@ jobs:
   check-and-commit:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout current branch
+      # 1. Завантажуємо репозиторій повністю (fetch-depth: 0 дозволяє бачити всі гілки)
+      - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.TASK_TOKEN }}
 
+      # 2. Запуск вашого скрипта перевірки
       - name: Run check script
         id: check_file
         run: |
@@ -16,22 +21,21 @@ jobs:
           ./check_index.sh
         continue-on-error: true
 
+      # 3. Оновлення README безпосередньо в гілці main
       - name: Update README on main branch
         if: steps.check_file.outcome == 'success'
         run: |
-          # Налаштування гіта
+          # Налаштування бота
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@://github.com"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Клонуємо main в окрему папку, щоб оновити README
-          git clone https://x-access-token:${{ secrets.TASK_TOKEN }}@://github.com{{ github.repository }}.git temp_main
-          cd temp_main
+          # Перемикаємося на main (код вже завантажений кроком Checkout)
           git checkout main
-
-          # Додаємо запис у README.md
+          
+          # Додаємо запис
           echo -e "\nBranch: ${{ github.ref_name }} - index.html exists ✅" >> README.md
 
-          # Коміт та пуш за допомогою вашого токена
+          # Коміт та пуш
           git add README.md
           git commit -m "Update README: index.html found in ${{ github.ref_name }}"
           git push origin main
