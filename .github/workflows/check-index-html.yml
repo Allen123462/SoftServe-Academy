@@ -20,22 +20,21 @@ jobs:
           chmod +x check_index.sh
           ./check_index.sh
         continue-on-error: true
-
-      # 3. Оновлення README безпосередньо в гілці main
-      - name: Update README on main branch
+        
+    # 3. Оновлення README безпосередньо в гілці master
+      - name: Update README on master branch
         if: steps.check_file.outcome == 'success'
         run: |
-          # Налаштування бота
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Перемикаємося на main (код вже завантажений кроком Checkout)
-          git checkout main
+          git fetch origin master
           
-          # Додаємо запис
-          echo -e "\nBranch: ${{ github.ref_name }} - index.html exists ✅" >> README.md
+          git checkout master
+          
+          echo -e "\nBranch: ${{ github.ref_name }} - index.html існує ✅" >> README.md
 
-          # Коміт та пуш
           git add README.md
           git commit -m "Update README: index.html found in ${{ github.ref_name }}"
-          git push origin main
+          
+          git push origin master
